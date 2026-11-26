@@ -1,0 +1,53 @@
+              :-) GROMACS - gmx grompp, 2025.4-Ubuntu_2025.4_1 (-:
+
+Executable:   /usr/bin/gmx
+Data prefix:  /usr
+Working dir:  /mnt/c/users/thaku/onedrive/desktop/md_project/MoO3_Urea_Creatinine
+Command line:
+  gmx grompp -f em.mdp -c solv.gro -r solv.gro -p MoO3_urea.top -o em.tpr
+
+
+NOTE 1 [file em.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Generating 1-4 interactions: fudge = 0.5
+Number of degrees of freedom in T-Coupling group rest is 42405.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 2 [file em.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+
+There were 2 NOTEs
+
+Back Off! I just backed up em.tpr to ./#em.tpr.1#
+
+GROMACS reminds you: "It Doesn't Seem Right, No Computers in Sight" (Faun Fables)
+
+Setting the LD random seed to -2119113
+
+Generated 339076 of the 339076 non-bonded parameter combinations
+
+Generated 339076 of the 339076 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'MoO3_sheet'
+
+Excluding 3 bonded neighbours molecule type 'UREA'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+Analysing residue names:
+There are:   336      Other residues
+There are:  5724      Water residues
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+The largest distance between excluded atoms is 0.564 nm between atom 129 and 389
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 52x52x52, spacing 0.115 0.115 0.115
+
+Estimate for the relative computational load of the PME mesh part: 0.10
+
+This run will generate roughly 2 Mb of data

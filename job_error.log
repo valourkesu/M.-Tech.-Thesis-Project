@@ -1,0 +1,41 @@
+                      :-) GROMACS - gmx mdrun, 2025.4 (-:
+
+Executable:   /scratch/home/hpc1165/gromacs-2025/bin/gmx_mpi
+Data prefix:  /scratch/home/hpc1165/gromacs-2025
+Working dir:  /scratch/home/hpc1165/md_project/MoO3_Urea_Creatinine
+Command line:
+  gmx_mpi mdrun -deffnm md -ntomp 4 -cpt 15
+
+Reading file md.tpr, VERSION 2025.4-Ubuntu_2025.4_1 (single precision)
+Changing nstlist from 10 to 100, rlist from 1.4 to 1.53
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+Using 8 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 4 OpenMP threads per MPI process
+
+starting mdrun 'MoO3 sheet + urea in water'
+50000000 steps, 100000.0 ps.
+
+Writing final coordinates.
+
+
+Dynamic load balancing report:
+ DLB was turned on during the run due to measured imbalance.
+ Average load imbalance: 1.5%.
+ The balanceable part of the MD step is 61%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 0.9%.
+ Steps where the load balancing was limited by -rdd, -rcon and/or -dds: X 0 % Y 0 %
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:  2006854.581    62714.363     3200.0
+                         17h25:14
+                 (ns/day)    (hour/ns)
+Performance:      137.767        0.174
+
+GROMACS reminds you: "Mathematics is no more computation than typing is literature." (John Allen Paulos)
+

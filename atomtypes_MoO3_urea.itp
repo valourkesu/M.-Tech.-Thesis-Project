@@ -1,0 +1,16 @@
+; All [ atomtypes ] for the MoO3 + urea system (must precede every [ moleculetype ])
+[ atomtypes ]
+; name  at.num   mass      charge ptype  sigma(nm)  epsilon(kJ/mol)
+  Mo_mo3  42   95.95000   0.00000   A   0.27190   0.23430   ; UFF Mo
+  O_mo3    8   15.99940   0.00000   A   0.31182   0.25104   ; UFF O (was 0.315/0.636 = TIP3P-like)
+
+; LigParGen urea types (opls_800-807)
+[ atomtypes ]
+  opls_806  H806     1.0080     0.000    A    0.00000E+00   0.00000E+00
+  opls_801  N801    14.0070     0.000    A    3.25000E-01   7.11280E-01
+  opls_807  H807     1.0080     0.000    A    0.00000E+00   0.00000E+00
+  opls_805  O805    15.9990     0.000    A    2.96000E-01   8.78640E-01
+  opls_802  C802    12.0110     0.000    A    3.55000E-01   2.92880E-01
+  opls_800  H800     1.0080     0.000    A    0.00000E+00   0.00000E+00
+  opls_803  H803     1.0080     0.000    A    0.00000E+00   0.00000E+00
+  opls_804  N804    14.0070     0.000    A    3.25000E-01   7.11280E-01

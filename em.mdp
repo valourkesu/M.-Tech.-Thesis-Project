@@ -1,0 +1,28 @@
+; =====================================================================
+; Stage 1: Energy minimization  (MoO3 sheet + urea + SPC/E water, OPLS-AA)
+; Settings taken from the reference paper (Maleki et al., 2021) where it
+; specifies them; remaining entries follow the protein-ligand tutorial.
+; =====================================================================
+
+; --- What to do / when to stop ---------------------------------------
+integrator      = steep      ; steepest descent                      (paper + tutorial)
+emtol           = 100.0      ; stop when max force < 100 kJ/mol/nm   (paper; tutorial uses 1000)
+emstep          = 0.01       ; initial step size, nm                 (tutorial)
+nsteps          = 50000      ; maximum number of steps               (paper + tutorial)
+
+; --- Neighbour searching ---------------------------------------------
+cutoff-scheme   = Verlet     ;                                       (tutorial)
+nstlist         = 1          ; update every step during minimization (tutorial)
+pbc             = xyz        ; periodic in all directions            (paper + tutorial)
+
+; --- Electrostatics and van der Waals --------------------------------
+coulombtype     = PME        ; long-range electrostatics             (tutorial)
+rcoulomb        = 1.4        ; 1.4 nm cut-off                        (paper; tutorial uses 1.2)
+vdwtype         = cut-off    ; plain cut-off, as OPLS-AA expects     (paper)
+rvdw            = 1.4        ; 1.4 nm cut-off                        (paper; tutorial uses 1.2)
+DispCorr        = EnerPres   ; standard long-range dispersion correction for OPLS-AA
+
+; --- Periodic sheet ----------------------------------------------------
+; The MoO3 sheet is bonded to itself across the box edges (infinite sheet in x and z),
+; so bonded interactions must use the minimum image convention.
+periodic-molecules = yes
